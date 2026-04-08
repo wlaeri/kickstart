@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="60%" stop-color="#64B5F6"/>
+      <stop offset="100%" stop-color="#BBDEFB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- Clouds -->
+  <ellipse cx="200" cy="120" rx="100" ry="35" fill="white" opacity="0.25"/>
+  <ellipse cx="900" cy="80" rx="120" ry="40" fill="white" opacity="0.2"/>
+  <ellipse cx="550" cy="160" rx="80" ry="28" fill="white" opacity="0.18"/>
+
+  <!-- Grass layers -->
+  <path d="M0,480 C300,520 600,440 900,480 C1050,500 1150,470 1200,480 L1200,630 L0,630 Z" fill="#43A047"/>
+  <path d="M0,510 C300,540 600,480 900,510 C1050,525 1150,500 1200,510 L1200,630 L0,630 Z" fill="#4CAF50"/>
+  <path d="M0,550 C300,570 600,530 900,550 C1050,560 1150,545 1200,550 L1200,630 L0,630 Z" fill="#66BB6A"/>
+
+  <!-- Soccer ball (left) -->
+  <g transform="translate(160,400) scale(0.45)">
+    <circle fill="#1A237E" cx="97" cy="97" r="97"/>
+    <path fill="#ffffff" d="m 94,9.2 a 88,88 0 0 0 -55,21.8 l 27,0 28,-14.4 0,-7.4 z m 6,0 0,7.4 28,14.4 27,0 a 88,88 0 0 0 -55,-21.8 z m -67.2,27.8 a 88,88 0 0 0 -20,34.2 l 16,27.6 23,-3.6 21,-36.2 -8.4,-22 -31.6,0 z m 96.8,0 -8.4,22 21,36.2 23,3.6 15.8,-27.4 a 88,88 0 0 0 -19.8,-34.4 l -31.6,0 z m -50,26 -20.2,35.2 17.8,30.8 39.6,0 17.8,-30.8 -20.2,-35.2 -34.8,0 z m -68.8,16.6 a 88,88 0 0 0 -1.8,17.4 88,88 0 0 0 10.4,41.4 l 7.4,-4.4 -1.4,-29 -14.6,-25.4 z m 172.4,0.2 -14.6,25.2 -1.4,29 7.4,4.4 a 88,88 0 0 0 10.4,-41.4 88,88 0 0 0 -1.8,-17.2 z m -106,57.2 -15.4,19 L 77.2,182.6 a 88,88 0 0 0 19.8,2.4 88,88 0 0 0 19.8,-2.4 l 15.4,-26.6 -15.4,-19 -39.6,0 z m -47.8,2.6 -7,4 A 88,88 0 0 0 68.8,180.4 l -14,-24.6 -25.4,-16.2 z m 135.2,0 -25.4,16.2 -14,24.4 a 88,88 0 0 0 46.4,-36.6 l -7,-4 z"/>
+  </g>
+
+  <!-- Soccer ball (right) -->
+  <g transform="translate(960,380) scale(0.35)">
+    <circle fill="#1A237E" cx="97" cy="97" r="97"/>
+    <path fill="#ffffff" d="m 94,9.2 a 88,88 0 0 0 -55,21.8 l 27,0 28,-14.4 0,-7.4 z m 6,0 0,7.4 28,14.4 27,0 a 88,88 0 0 0 -55,-21.8 z m -67.2,27.8 a 88,88 0 0 0 -20,34.2 l 16,27.6 23,-3.6 21,-36.2 -8.4,-22 -31.6,0 z m 96.8,0 -8.4,22 21,36.2 23,3.6 15.8,-27.4 a 88,88 0 0 0 -19.8,-34.4 l -31.6,0 z m -50,26 -20.2,35.2 17.8,30.8 39.6,0 17.8,-30.8 -20.2,-35.2 -34.8,0 z m -68.8,16.6 a 88,88 0 0 0 -1.8,17.4 88,88 0 0 0 10.4,41.4 l 7.4,-4.4 -1.4,-29 -14.6,-25.4 z m 172.4,0.2 -14.6,25.2 -1.4,29 7.4,4.4 a 88,88 0 0 0 10.4,-41.4 88,88 0 0 0 -1.8,-17.2 z m -106,57.2 -15.4,19 L 77.2,182.6 a 88,88 0 0 0 19.8,2.4 88,88 0 0 0 19.8,-2.4 l 15.4,-26.6 -15.4,-19 -39.6,0 z m -47.8,2.6 -7,4 A 88,88 0 0 0 68.8,180.4 l -14,-24.6 -25.4,-16.2 z m 135.2,0 -25.4,16.2 -14,24.4 a 88,88 0 0 0 46.4,-36.6 l -7,-4 z"/>
+  </g>
+
+  <!-- Stars -->
+  <polygon points="350,100 355,115 370,115 358,124 362,140 350,130 338,140 342,124 330,115 345,115" fill="#FFD54F" opacity="0.6"/>
+  <polygon points="800,140 804,150 815,150 806,156 809,167 800,160 791,167 794,156 785,150 796,150" fill="#FFD54F" opacity="0.5"/>
+
+  <!-- Main text -->
+  <text x="600" y="280" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="72" fill="white" letter-spacing="-1">
+    <tspan>Kickstart Kids</tspan>
+  </text>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="72" fill="#FFD54F" letter-spacing="-1">
+    <tspan>Soccer</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="28" fill="white" opacity="0.9">
+    Youth Soccer Programs in Palm Beach, FL
+  </text>
+
+  <!-- Tagline pill -->
+  <rect x="420" y="438" width="360" height="40" rx="20" fill="white" opacity="0.2"/>
+  <text x="600" y="464" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="white">
+    Ages 2-14  &#x2022;  $60/month  &#x2022;  We Come to You
+  </text>
+</svg>
