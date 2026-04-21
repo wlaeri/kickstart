@@ -103,11 +103,11 @@ export default function About() {
                   <span className="px-4 py-2 bg-orange-light text-orange-dark text-sm font-bold rounded-full">Fun</span>
                 </div>
               </div>
-              <div className="relative min-h-[280px] md:min-h-0">
+              <div className="relative flex items-center justify-center">
                 <img
                   src="/images/charlie-the-chicken.png"
                   alt="Charlie the Chicken - our storytelling mascot in an adventure scene"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                   loading="lazy"
                 />
               </div>
