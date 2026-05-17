@@ -1,10 +1,3 @@
-const photos = [
-  { src: '/images/kids_1.png', alt: 'Kids lined up with soccer balls ready to play' },
-  { src: '/images/kids_2.png', alt: 'Kids practicing soccer dribbling drills' },
-  { src: '/images/kids_3.png', alt: 'Kids playing soccer outdoors on a sunny day' },
-  { src: '/images/kids_4.png', alt: 'Kids having fun with soccer balls during a session' },
-]
-
 export default function Gallery() {
   return (
     <section className="relative bg-white overflow-hidden">
@@ -19,22 +12,20 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 reveal-stagger">
-          {photos.map((photo, i) => (
-            <div
-              key={photo.src}
-              className={`reveal relative overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] aspect-[4/3] group ${
-                i % 2 === 1 ? 'lg:translate-y-6' : ''
-              }`}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-          ))}
+        <div className="reveal">
+          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_12px_48px_rgba(0,0,0,0.15)] bg-navy aspect-video max-w-4xl mx-auto">
+            <video
+              src="/images/IMG_6675.MOV"
+              poster="/images/kids_3.png"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
