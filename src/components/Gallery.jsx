@@ -1,5 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
-
 const photos = [
   { src: '/images/action_1.jpg', alt: 'Kids enjoying soccer practice' },
   { src: '/images/action_2.jpg', alt: 'Kids in action on the field' },
@@ -8,37 +6,7 @@ const photos = [
   { src: '/images/action_5.jpg', alt: 'Kids having fun with soccer balls' },
 ]
 
-const AUTO_ADVANCE_MS = 4500
-
 export default function Gallery() {
-  const [index, setIndex] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const touchStartX = useRef(null)
-
-  const goTo = (next) => setIndex((next + photos.length) % photos.length)
-  const prev = () => goTo(index - 1)
-  const next = () => goTo(index + 1)
-
-  useEffect(() => {
-    if (paused) return
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % photos.length)
-    }, AUTO_ADVANCE_MS)
-    return () => clearInterval(id)
-  }, [paused])
-
-  const onTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-  const onTouchEnd = (e) => {
-    if (touchStartX.current == null) return
-    const delta = e.changedTouches[0].clientX - touchStartX.current
-    if (Math.abs(delta) > 40) {
-      delta < 0 ? next() : prev()
-    }
-    touchStartX.current = null
-  }
-
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 py-16 md:py-20">
@@ -68,64 +36,22 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div
-          className="reveal relative max-w-2xl mx-auto px-6 md:px-12"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          <div
-            className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_12px_48px_rgba(0,0,0,0.15)] bg-navy aspect-[3/4]"
-            onTouchStart={onTouchStart}
-            onTouchEnd={onTouchEnd}
-          >
-            {photos.map((photo, i) => (
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 reveal-stagger">
+          {photos.map((photo, i) => (
+            <div
+              key={photo.src}
+              className={`reveal relative overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] aspect-[4/3] group ${
+                i % 2 === 1 ? 'lg:translate-y-6' : ''
+              } ${i === 4 ? 'col-span-2 lg:col-span-1' : ''}`}
+            >
               <img
-                key={photo.src}
                 src={photo.src}
                 alt={photo.alt}
-                loading={i === 0 ? 'eager' : 'lazy'}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${
-                  i === index ? 'opacity-100' : 'opacity-0'
-                }`}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={prev}
-            aria-label="Previous photo"
-            className="absolute left-0 md:-left-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange z-10"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            aria-label="Next photo"
-            className="absolute right-0 md:-right-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange z-10"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-
-          <div className="flex justify-center gap-2 mt-6">
-            {photos.map((photo, i) => (
-              <button
-                key={photo.src}
-                type="button"
-                onClick={() => goTo(i)}
-                aria-label={`Go to photo ${i + 1}`}
-                aria-current={i === index}
-                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange ${
-                  i === index ? 'w-8 bg-orange' : 'w-2.5 bg-navy/20 hover:bg-navy/40'
-                }`}
-              />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
