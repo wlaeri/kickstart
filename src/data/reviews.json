@@ -1,0 +1,52 @@
+{
+  "rating": 5,
+  "total": 6,
+  "fetchedAt": "2026-07-01T00:07:20.325Z",
+  "reviews": [
+    {
+      "author": "Christela Arcelin",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjXgXUFTEfa7t5XbetDlRV5B-IH2y2s8ySlQ2yDa55CIbitnk0OG=s128-c0x00000000-cc-rp-mo",
+      "authorUrl": "https://www.google.com/maps/contrib/111965637630596157582/reviews",
+      "rating": 5,
+      "text": "Kickstart is amazing and super kid friendly. Coach Jesse is amazing with my kiddos. My girls come home so excited to tell me what they did at soccer and show me their all star card.",
+      "relativeTime": "in the last week",
+      "publishTime": "2026-06-28T18:12:59.434812817Z"
+    },
+    {
+      "author": "Kyle Whitmire",
+      "profilePhoto": "https://lh3.googleusercontent.com/a/ACg8ocIWw6SpjljFsUUBU_lzpoRdMjj6zU67eTlyo6JTPcMVPjHR1A=s128-c0x00000000-cc-rp-mo",
+      "authorUrl": "https://www.google.com/maps/contrib/107701824050099033129/reviews",
+      "rating": 5,
+      "text": "A major value add to school and childcare programming! I worked in childcare for several years and I can tell you companies like this are hard to come by. They’re consistent and professional!",
+      "relativeTime": "in the last week",
+      "publishTime": "2026-06-24T23:06:55.978676373Z"
+    },
+    {
+      "author": "Corina Bryan",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWDMV-NLXdwe7qjaQAV5WSnlawUvJNiXvEyxuxXUZWeldFhRv32=s128-c0x00000000-cc-rp-mo",
+      "authorUrl": "https://www.google.com/maps/contrib/102918277447219099886/reviews",
+      "rating": 5,
+      "text": "Coach Jesse is the best since my son have started soccer he talks about him every Tuesday when we go home how much fun he have and I see how good he got with playing soccer now since he started if your looking for a soccer coach you should choose them your child will benefit and learn so much",
+      "relativeTime": "in the last week",
+      "publishTime": "2026-06-24T16:03:41.370539619Z"
+    },
+    {
+      "author": "Rachel Richards",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUuxtRQt92NGML93miQaNbO943t0UH3gJdU_8_LuTv6UAYE_SI=s128-c0x00000000-cc-rp-mo",
+      "authorUrl": "https://www.google.com/maps/contrib/103494601670664049817/reviews",
+      "rating": 5,
+      "text": "Kickstart Soccer has been such an amazing addition to our child’s school experience! The way they combine soccer skills with fun stories and imaginative play is truly special. It keeps our son engaged, excited, and looking forward to every session.\n\nI’ve seen such a positive impact—my child is not only learning the fundamentals of soccer, but also building confidence, listening skills, and teamwork, all while having so much fun. It’s clear the coaches put a lot of thought and energy into making each class enjoyable and meaningful.",
+      "relativeTime": "in the last week",
+      "publishTime": "2026-06-24T13:20:02.194055382Z"
+    },
+    {
+      "author": "Kentara Jones",
+      "profilePhoto": "https://lh3.googleusercontent.com/a-/ALV-UjUgf5JOy2lwGID1skjVBXb4NpHM-D3c_QwsRGxGtlo2ZjWuRbQj=s128-c0x00000000-cc-rp-mo-ba2",
+      "authorUrl": "https://www.google.com/maps/contrib/107990272858834047342/reviews",
+      "rating": 5,
+      "text": "Thank you for being such an amazing coach to our little ones! Coaching a team of 3-year-olds takes incredible patience, energy, and a genuine love for kids, and you have all of those qualities. You made every practice and game fun while helping the children build confidence, learn the basics of soccer, and most importantly, enjoy being part of a team.\nThe smiles on their faces say it all. Thank you for creating such a positive, encouraging environment where every child felt included and celebrated. We truly appreciate the time, care, and enthusiasm you brought to every session. Our family is so grateful for everything you've done!",
+      "relativeTime": "in the last week",
+      "publishTime": "2026-06-24T13:15:56.113078258Z"
+    }
+  ]
+}
