@@ -97,8 +97,26 @@ function ReviewCard({ review, className = '' }) {
 }
 
 export default function Reviews() {
-  const { rating, total, reviews } = data
+  const { rating, reviews } = data
   const hasReviews = reviews && reviews.length > 0
+
+  // Reviews and rating are hardcoded; only the count refreshes at runtime from
+  // the daily-cached /api/review-count function. Falls back to the hardcoded
+  // count when the endpoint is unavailable (e.g. plain `vite` dev or on error).
+  const [total, setTotal] = useState(data.total)
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/review-count')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((json) => {
+        if (active && json && typeof json.total === 'number') setTotal(json.total)
+      })
+      .catch(() => {})
+    return () => {
+      active = false
+    }
+  }, [])
 
   return (
     <section className="relative bg-cream overflow-hidden">

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/fetch-reviews.mjs && vite build",
+    "build": "vite build",
+    "fetch-reviews": "node scripts/fetch-reviews.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
